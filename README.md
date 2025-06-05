@@ -13,6 +13,7 @@ This repository showcases a conceptual reference architecture I designed for a h
 - **Multi-Cloud Architecture** – secure interconnection of on-prem, Azure, AWS, and SaaS
 - **Secure Access Enforcement** – VPN, Conditional Access, and ZTNA
 
+
 ---
 
 ## 🔐 Architecture (Conceptual View)
