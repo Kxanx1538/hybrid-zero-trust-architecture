@@ -56,9 +56,9 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 |----------------------|--------------------------------------------------------------|
 | Identity & Access    | Microsoft Entra ID, Azure AD, SCIM, MFA, SSO                 |
 | Zero Trust Network   | Netbird VPN, Microsoft Global Secure Access (GSA)            |
-| Cloud Infrastructure | Azure, AWS (IAM, EC2, CloudTrail)                            |
+| Cloud Infrastructure | Azure, AWS (IAM, EC2, CloudWatch)                            |
 | Endpoint & UEM       | Zoho Endpoint Central, integrated with Azure AD              |
-| SIEM & Monitoring    | Microsoft Sentinel, AWS CloudTrail, Site24x7, CloudWatch     |
+| SIEM & Monitoring    | Microsoft Sentinel, Azure Monitor, Site24x7, CloudWatch     |
 | Compliance & Audit   | Defender for Cloud, AWS Security Hub, Log360                 |
 
 ---
