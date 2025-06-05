@@ -1,46 +1,97 @@
-# hybrid-zero-trust-architecture
 
-# 🛡️ Hybrid Zero Trust Architecture – Multi-Cloud & SaaS Integration
+# 🔐 Hybrid Multi-Cloud Zero Trust Architecture
 
-This repository showcases a conceptual reference architecture I designed for a hybrid multi-cloud Zero Trust security model. The design integrates identity, access control, monitoring, and secure remote access across cloud, on-premises, and SaaS environments.
 
----
-
-## 🎯 Key Concepts
-
-- **Zero Trust Security** – applied across user, device, and network levels
-- **Hybrid Identity Management** – federated and centralized via a cloud-native IdP
-- **Multi-Cloud Architecture** – secure interconnection of on-prem, Azure, AWS, and SaaS
-- **Secure Access Enforcement** – VPN, Conditional Access, and ZTNA
-
+Welcome to my cybersecurity engineering showcase—a real-world hybrid multi-cloud architecture I designed and implemented using Zero Trust principles across On-Prem, Azure, AWS, and SaaS ecosystem.  The design integrates identity, access control, monitoring, and secure remote access across cloud, on-premises, and SaaS environments.
 
 ---
 
-## 🔐 Architecture (Conceptual View)
+## 🌐 Overview
 
-![Architecture](./assets/hybrid_architecture_sanitized.png)
+This repository demonstrates how I built and secured a hybrid infrastructure spanning:
 
-> 🔒 This diagram is a **sanitized version** of a real-world design used in production. No sensitive details are shown.
+- 🏢 On-Premises  
+- ☁️ Azure & AWS Cloud  
+- 🧩 SaaS Platforms  
 
----
-
-## 📸 Project in Action
-
-| Use Case                                  | Screenshot                                 |
-|-------------------------------------------|--------------------------------------------|
-| Privileged Access Review (Redacted)       | ![Screenshot](./assets/incident_redacted.png) |
-| Conditional Access Enforcement (Demo)     | ![Screenshot](./assets/ca_policy_demo.png) |
+The architecture follows Zero Trust principles — ensuring **continuous identity verification**, **least privilege**, and **context-based access** across environments.
 
 ---
 
-## 🧰 Technologies Used
+## 🧩 Architecture Diagram
 
-- **IAM**: Cloud-native identity provider, SSO/MFA/SCIM integrations
-- **Cloud**: Azure, AWS
-- **SaaS**: Unified access & monitoring of third-party tools
-- **Security Tools**: SIEM, UEM, Endpoint Protection (names omitted)
+🔽 Sanitized visual of the high-level architecture:
+
+![Hybrid Architecture](./assets/Hybrid_Architecture_Diagram.png)
 
 ---
 
-## 📁 Repo Contents
+## 🛡️ Security Highlights
 
+- ✅ Federated identity and access control with **Microsoft Entra ID**
+- ✅ Zero Trust Network Access using **Netbird VPN** + **Microsoft Global Secure Access**
+- ✅ **Unified Endpoint Management** via Endpoint Central, integrated with Azure AD
+- ✅ **SIEM integrations**: Microsoft Sentinel, AWS CloudTrail, Site24x7
+- ✅ **Conditional Access** for trusted zones and role-based access
+- ✅ **TLS 1.2**, **disk encryption**, and **VPN-enforced SSO**
+
+---
+
+## 📸 SecOps in Action
+
+| Description                                | Screenshot                                     |
+|--------------------------------------------|------------------------------------------------|
+| 🔎 Privilege escalation alert investigation| ![Incident](./assets/priv-incident.png)        |
+| 🎯 Conditional Access enforcement          | ![CA Policy](./assets/ca-policy.png)           |
+| 🖥️ Device monitoring in Endpoint Central   | ![Endpoint](./assets/device-monitoring.png)    |
+| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)     |
+
+> All screenshots are real, redacted, and timestamped. No identifying or sensitive data is shown.
+
+---
+
+## 🧰 Tooling Stack
+
+| Category             | Tools / Platforms                                            |
+|----------------------|--------------------------------------------------------------|
+| Identity & Access    | Microsoft Entra ID, Azure AD, SCIM, MFA, SSO                 |
+| Zero Trust Network   | Netbird VPN, Microsoft Global Secure Access (GSA)            |
+| Cloud Infrastructure | Azure, AWS (IAM, EC2, CloudTrail)                            |
+| Endpoint & UEM       | Zoho Endpoint Central, integrated with Azure AD              |
+| SIEM & Monitoring    | Microsoft Sentinel, AWS CloudTrail, Site24x7, CloudWatch     |
+| Compliance & Audit   | Defender for Cloud, AWS Security Hub, Log360                 |
+
+---
+
+## 🧠 Future Enhancements
+
+- 📦 Terraform Infrastructure-as-Code modules (part of my ObsidianWall platform initiative)
+- 🛠️ Python-based CLI toolkit for security auditing (Entra ID, AWS, logs)
+- 📊 Zero Trust rollout tracker / scorecard
+- ✅ Compliance control matrix to map implementation to frameworks (NIST, CIS, ISO)
+
+---
+
+## 📁 Repository Contents
+## 📁 Repository Contents
+
+```
+├── assets/           # Diagrams and redacted screenshots
+├── scripts/          # Optional Python automation scripts
+├── policies/         # Optional Conditional Access policy exports
+├── README.md         # This file
+└── LICENSE
+```
+
+---
+
+## 🚀 Why This Project?
+
+This project represents real-world cybersecurity engineering work:  
+✅ Hands-on with modern hybrid security stacks  
+✅ Built using Zero Trust principles  
+✅ Demonstrates SecOps, IAM, and cloud infrastructure security in action
+
+---
+
+> 🧭 Want to see this in action or talk shop? Let’s connect on [LinkedIn](https://linkedin.com) or [GitHub Discussions](https://github.com)!
