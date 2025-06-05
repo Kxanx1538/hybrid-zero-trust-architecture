@@ -31,7 +31,7 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 - ✅ Hybrid identity and access control with **Microsoft Entra ID**
 - ✅ Zero Trust Network Access using **Netbird VPN** + **Microsoft Global Secure Access**
 - ✅ **Unified Endpoint Management** via Endpoint Central, integrated with Azure AD
-- ✅ **SIEM integrations**: Microsoft Sentinel, AWS CloudTrail, Site24x7
+- ✅ **SIEM integrations**: Microsoft Sentinel,AWS SecurityHub, AWS CloudWatch, Azure Monitor 
 - ✅ **Conditional Access** for trusted zones and role-based access
 - ✅ **TLS 1.2**, **disk encryption**, and **VPN-enforced SSO**
 
