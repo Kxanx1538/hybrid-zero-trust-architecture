@@ -22,7 +22,7 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 
 🔽 Sanitized visual of the high-level architecture:
 
-![Hybrid Architecture](./assets/Hybrid_Architecture_Diagram.png)
+![Hybrid Architecture](./assets/Hybrid+Multi-cloud-sanitized.drawio.png)
 
 ---
 
@@ -39,12 +39,13 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 
 ## 📸 SecOps in Action
 
-| Description                                | Screenshot                                     |
-|--------------------------------------------|------------------------------------------------|
-| 🔎 Privilege escalation alert investigation| ![Incident](./assets/priv-incident.png)        |
-| 🎯 Conditional Access enforcement          | ![CA Policy](./assets/ca-policy.png)           |
-| 🖥️ Device monitoring in Endpoint Central   | ![Endpoint](./assets/device-monitoring.png)    |
-| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)     |
+| Description                                | Screenshot                                               |
+|--------------------------------------------|------------------------------------------------          |
+| 🔎 Privilege escalation alert investigation| ![Incident](./assets/Privilege_escalation.png)           |
+| 🔎 Suspicious resource deployment          | ![Incident](./assets/Suspicious_resource_deployment.png) |
+| 🎯 Conditional Access enforcement          | ![CA Policy](./assets/ca-policy.png)                     |
+| 🖥️ Device monitoring in Endpoint Central   | ![Endpoint](./assets/device-monitoring.png)              |
+| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)               |
 
 > All screenshots are real, redacted, and timestamped. No identifying or sensitive data is shown.
 
