@@ -116,21 +116,8 @@ I implemented controls aligned with frameworks like SOX, NYDFS, GLBA, PCI-DSS, N
 
 ---
 
-## 🧠 Future Enhancements
-
-## 🚧 Future Projects (In Progress)
-
-- **Security Infrastructure-as-Code (SIaC) Venture**  
-  *(Part of my ObsidianWall platform initiative)*  
-  Designing an extensible IaC-based framework focused on secure cloud deployments, compliance-driven automation, and Zero Trust principles.
-- **AI-Enhanced Security Automation Toolkit**  
-  Building toward an intelligent engine that assists with policy enforcement, misconfiguration analysis, and IaC generation for multi-cloud environments.
-
-
-- 📦 Terraform Infrastructure-as-Code modules (part of my ObsidianWall platform initiative)
-- 🛠️ Python-based CLI toolkit for security auditing (Entra ID, AWS, logs)
-- 📊 Zero Trust rollout tracker / scorecard
-- ✅ Compliance control matrix to map implementation to frameworks (NIST, CIS, ISO)
+## 🚧 Future Projects: ObsidianWall Platform Initiative
+Security Infrastructure-as-Code (SIaC) — Designing a secure-by-default IaC framework focused on compliant, multi-cloud deployments.
 
 ---
 
@@ -148,7 +135,7 @@ I implemented controls aligned with frameworks like SOX, NYDFS, GLBA, PCI-DSS, N
 
 ## 🚀 Why This Project?
 
-This project represents real-world cybersecurity engineering work:  
+This project represents my real-world cybersecurity engineering work:  
 ✅ Hands-on with modern hybrid security stacks  
 ✅ Built using Zero Trust principles  
 ✅ Demonstrates SecOps, IAM, and cloud infrastructure security in action
