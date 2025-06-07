@@ -77,21 +77,25 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 | Description                                                    | Screenshot                                               |
 |----------------------------------------------------------------|------------------------------------------------          |
-| 🔎 Correlated attacks: Privilege escalation alert investigation:This Sentinel investigation reflects my analysis of a high-severity incident involving unauthorized role elevation. Sentinel’s Fusion analytics automatically grouped related alerts — such as privileged role assignments and PowerShell activity — into a unified attack storyline.
-
+| 🔎 Correlated attacks: Privilege escalation alert investigation
+This Sentinel investigation reflects my analysis of a high-severity incident involving unauthorized role elevation. Sentinel’s Fusion analytics automatically grouped related alerts — such as privileged role assignments and PowerShell activity — into a unified attack storyline.
 I examined the Investigation Graph to correlate IP addresses, user accounts, and affected resources. This accelerated my understanding of the attack path, validated the threat, and informed response decisions.
-
-The view demonstrates how I conducted cross-domain correlation analysis to drive evidence-based incident response in a hybrid environment.| ![Incident](./assets/Persistant_attack.png)           |
+The view demonstrates how I conducted cross-domain correlation analysis to drive evidence-based incident response in a hybrid environment.                                                     | ![Incident](./assets/Persistant_attack.png)           |
 | 📊  SIEM Log Correlation in Microsoft Sentinel
-
 Continuing from the same incident, this view captures my analysis using the Timeline tab — which revealed how the attacker’s activities unfolded across services and time.
-
 I traced suspicious actions from initial access to privilege escalation across Entra ID, Defender for Cloud, and Azure Activity. By combining timeline mapping with graph-based entity analysis, I accelerated investigation and reinforced incident response accuracy.
-
-This demonstrates my ability to interpret correlated data across Microsoft’s XDR stack and convert it into actionable response steps using Microsoft Sentinel.  | ![Incident](./assets/Correlated_story_telling.png) |
-| 🎯 Conditional Access Policy enforcement(**80%** Score)        | ![CA Policy](./assets/Conditional_access_policies.png)   |
-| 🖥️ Device monitoring in Endpoint Central: Shows real-world vulnerability visibility and patch posture for hybrid endpoints using Endpoint Central, integrated with Microsoft Entra ID device identity.   | ![Endpoint](./assets/Device_monitoring.png)|
-|Microsoft Purview showing a compliance score of **80.21%**, reflecting strong enforcement of data governance, regulatory controls, and risk-based access monitoring.  Microsoft Purview centralizes compliance insights and monitors alignment with standards like SOX, NYDFS, GLBA, PCI-DSS, NIST, ISO 27001, and Microsoft Security Benchmarks.|![Purview Compliance](./assets/Compliance_score.png) |
+This demonstrates my ability to interpret correlated data across Microsoft’s XDR stack and convert it into actionable response steps using Microsoft Sentinel.                                   | ![Incident](./assets/Correlated_story_telling.png) |
+| 🎯 Conditional Access Policy enforcement(**80%** Score)   
+This screenshot reflects my implementation and continuous enforcement of Conditional Access policies in Microsoft Entra ID, achieving an 80.21% identity security score. Policies enforced include MFA for privileged roles, blocking legacy authentication, and device-based access restrictions.
+I aligned most configurations with Microsoft’s Zero Trust recommendations while testing custom policies in Report-Only mode for iterative evaluation.
+This demonstrates my capability to operationalize adaptive access control using real-world identity posture metrics to assess effectiveness and gaps.                                           | ![CA Policy](./assets/Conditional_access_policies.png)   |
+| 🖥️ Device monitoring in Endpoint Central
+ This view illustrates my endpoint vulnerability and patch compliance monitoring across a hybrid fleet using Endpoint Central, integrated with Microsoft Entra ID for device identity governance.
+It shows how I maintain visibility into OS versions, patch levels, critical vulnerabilities, and compliance status across remote and on-prem devices.
+My configuration supports automated patch deployment, threat detection, and device health tracking—forming a foundational layer of defense for endpoint hardening.                                | ![Endpoint](./assets/Device_monitoring.png)|
+|Microsoft Purview showing a compliance score of **80.21%**
+This screenshot shows a Microsoft Purview compliance score of 80.21%, reflecting my enforcement of regulatory and data governance policies across Microsoft 365 and hybrid resources.
+I implemented controls aligned with frameworks like SOX, NYDFS, GLBA, PCI-DSS, NIST, CIS, ISO 27001, and Microsoft Security Benchmarks, using Purview to monitor and remediate gaps.           |![Purview Compliance](./assets/Compliance_score.png) |
 
 > All screenshots are real, redacted, and timestamped. No identifying or sensitive data is shown.
 
@@ -113,6 +117,15 @@ This demonstrates my ability to interpret correlated data across Microsoft’s X
 ---
 
 ## 🧠 Future Enhancements
+
+## 🚧 Future Projects (In Progress)
+
+- **Security Infrastructure-as-Code (SIaC) Venture**  
+  *(Part of my ObsidianWall platform initiative)*  
+  Designing an extensible IaC-based framework focused on secure cloud deployments, compliance-driven automation, and Zero Trust principles.
+- **AI-Enhanced Security Automation Toolkit**  
+  Building toward an intelligent engine that assists with policy enforcement, misconfiguration analysis, and IaC generation for multi-cloud environments.
+
 
 - 📦 Terraform Infrastructure-as-Code modules (part of my ObsidianWall platform initiative)
 - 🛠️ Python-based CLI toolkit for security auditing (Entra ID, AWS, logs)
