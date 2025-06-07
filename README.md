@@ -24,7 +24,7 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 
 ![Hybrid Architecture](./assets/Hybrid+Multi-cloud-sanitized.drawio.png)
 
----
+
 ### 🧭 Architecture Breakdown & Data Flow
 
 🧩 Architecture Components Explained
