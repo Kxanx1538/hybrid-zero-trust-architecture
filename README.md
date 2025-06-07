@@ -133,9 +133,9 @@ Security Infrastructure-as-Code (SIaC) — Designing a secure-by-default IaC fra
 
 ```
 ├── assets/           # Diagrams and redacted screenshots
-├── scripts/          # Optional Python automation scripts
-├── policies/         # Optional Conditional Access policy exports
-├── README.md         # This file
+├── scripts/          # Python automation scripts
+├── policies/         # Conditional Access policy exports
+├── README.md        
 └── LICENSE
 ```
 
