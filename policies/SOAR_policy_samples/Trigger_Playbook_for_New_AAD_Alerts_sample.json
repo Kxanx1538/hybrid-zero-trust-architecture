@@ -1,0 +1,54 @@
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workspaceName": { "type": "string" },
+    "ruleName": { "type": "string" },
+    "logicAppId": { "type": "string" }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/providers/automationRules",
+      "apiVersion": "2022-12-01",
+      "name": "[concat(parameters('workspaceName'), '/Microsoft.SecurityInsights/', parameters('ruleName'))]",
+      "properties": {
+        "displayName": "Trigger Playbook on AAD High Alerts",
+        "order": 2,
+        "triggeringLogic": {
+          "triggersOn": "Alerts",
+          "triggersWhen": "Created",
+          "conditions": [
+            {
+              "conditionType": "Property",
+              "conditionProperties": {
+                "propertyName": "AlertProductNames",
+                "operator": "Contains",
+                "propertyValues": ["Azure Active Directory"]
+              }
+            },
+            {
+              "conditionType": "Property",
+              "conditionProperties": {
+                "propertyName": "Severity",
+                "operator": "Equals",
+                "propertyValues": ["High"]
+              }
+            }
+          ]
+        },
+        "actions": [
+          {
+            "order": 1,
+            "actionType": "RunPlaybook",
+            "actionConfiguration": {
+              "logicAppId": "[parameters('logicAppId')]"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+
+

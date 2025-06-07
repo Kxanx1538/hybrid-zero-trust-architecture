@@ -1,0 +1,45 @@
+
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workspaceName": { "type": "string" },
+    "ruleName": { "type": "string" }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces/providers/automationRules",
+      "apiVersion": "2022-12-01",
+      "name": "[concat(parameters('workspaceName'), '/Microsoft.SecurityInsights/', parameters('ruleName'))]",
+      "properties": {
+        "displayName": "Auto-close Benign Alerts",
+        "order": 5,
+        "triggeringLogic": {
+          "triggersOn": "Alerts",
+          "triggersWhen": "Created",
+          "conditions": [
+            {
+              "conditionType": "Property",
+              "conditionProperties": {
+                "propertyName": "AlertProductNames",
+                "operator": "Contains",
+                "propertyValues": ["Unusual activity detected"]
+              }
+            }
+          ]
+        },
+        "actions": [
+          {
+            "order": 1,
+            "actionType": "ModifyProperties",
+            "actionConfiguration": {
+              "status": "Closed",
+              "classification": "BenignPositive_SuspiciousButExpected"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
