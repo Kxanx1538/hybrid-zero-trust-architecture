@@ -97,17 +97,33 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 
 ## 🧰 Tooling Stack
 
-| Category             | Tools / Platforms                                            |
-|----------------------|--------------------------------------------------------------|
-| Identity & Access    | Microsoft Entra ID, Azure AD, SCIM, MFA, SSO                 |
-| Zero Trust Network   | Netbird VPN, Microsoft Global Secure Access (GSA)            |
-| Cloud Infrastructure | Azure, AWS (IAM, EC2, CloudWatch)                            |
-| Endpoint & UEM       | Zoho Endpoint Central, integrated with Azure AD              |
-| SIEM & Monitoring    | Microsoft Sentinel, Azure Monitor, Site24x7, CloudWatch     |
-| Compliance & Audit   | Defender for Cloud, AWS Security Hub, Log360                 |
+| Category             | Tools / Platforms                                                                                      |
+|----------------------|--------------------------------------------------------------------------------------------------------|
+| Identity & Access    | Microsoft Entra ID, Active Directory, AWS Identity Center, Zoho Identity360, FIM, SCIM, MFA, SSO       |
+| Zero Trust Network   | Netbird VPN, Microsoft Global Secure Access (GSA), NSGs, Security Groups, Suricata IDS                 |
+| Cloud Infrastructure | Azure (VMs, VNets, NSGs, Azure Monitor), AWS (IAM, EC2, S3, CloudWatch), Terraform                     |
+| Endpoint & UEM       | Zoho Endpoint Central (UEM), Microsoft Defender for Endpoint (ATP), integrated with Entra ID           |
+| SIEM & Monitoring    | Microsoft Defender XDR, Microsoft Sentinel, Azure Monitor, Site24x7, AWS CloudWatch, Log360            |
+| Compliance & Governance   | Microsoft Purview, Microsoft Defender for Cloud, AWS Security Hub, Log360                         |
+| DevSecOps & Code Security | GitHub Actions, CodeQL, Dependabot, Burp suite 
 
 ---
 
+## 🧱 Zero Trust Pillars & Capabilities
+
+| Zero Trust Pillar        | Implementation & Tools                                                                          |
+|--------------------------|--------------------------------------------------------------------------------------------------|
+| **Identity**             | Microsoft Entra ID, MFA, Conditional Access, Identity360, SCIM, SSO, AWS Identity Center         |
+| **Devices**              | Zoho Endpoint Central (UEM), Microsoft Intune (if applicable), Compliance policies via Entra ID  |
+| **Network**              | Netbird VPN, Microsoft Global Secure Access (GSA), Azure NSGs, AWS Security Groups               |
+| **Applications**         | Conditional Access App Controls, SSO integrations, OAuth Scopes, Application Registrations       |
+| **Data**                 | Microsoft Purview (DLP, Insider Risk Mgmt, Compliance Manager), Sensitivity Labels, eDiscovery   |
+| **Infrastructure**       | Azure & AWS infrastructure secured via Terraform IaC, Defender for Cloud, AWS Security Hub       |
+| **Visibility & Analytics** | Microsoft Sentinel (SIEM), Azure Monitor, Site24x7, AWS CloudWatch, Log360                     |
+| **Automation & Response**| Sentinel SOAR playbooks, Azure Logic Apps, Auto-remediation policies, Compliance Manager insights|
+
+
+---
 ## 🚧 Future Projects: ObsidianWall Platform Initiative (In progress)
 Security Infrastructure-as-Code (SIaC) — Designing a secure-by-default IaC framework focused on compliant, multi-cloud deployments.
 
