@@ -75,13 +75,22 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 ## 📸 SecOps in Action
 
-| Description                                | Screenshot                                               |
-|--------------------------------------------|------------------------------------------------          |
-| 🔎 Correlated attacks: Privilege escalation alert investigation| ![Incident](./assets/Privilege_escalation.png)           |
-| 📦 Correlated attacks: Suspicious resource deployment          | ![Incident](./assets/Suspicious_resource_deployment.png) |
-| 🎯 Conditional Access Policy enforcement(**80%** Score)| ![CA Policy](./assets/Conditional_access_policies.png)   |
-| 🖥️ Device monitoring in Endpoint Central: Shows real-world vulnerability visibility and patch posture for hybrid endpoints using Endpoint Central, integrated with Microsoft Entra ID device identity.   | ![Endpoint](./assets/Device_monitoring.png)              |
-| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)|
+| Description                                                    | Screenshot                                               |
+|----------------------------------------------------------------|------------------------------------------------          |
+| 🔎 Correlated attacks: Privilege escalation alert investigation:This Sentinel investigation reflects my analysis of a high-severity incident involving unauthorized role elevation. Sentinel’s Fusion analytics automatically grouped related alerts — such as privileged role assignments and PowerShell activity — into a unified attack storyline.
+
+I examined the Investigation Graph to correlate IP addresses, user accounts, and affected resources. This accelerated my understanding of the attack path, validated the threat, and informed response decisions.
+
+The view demonstrates how I conducted cross-domain correlation analysis to drive evidence-based incident response in a hybrid environment.| ![Incident](./assets/Persistant_attack.png)           |
+| 📊  SIEM Log Correlation in Microsoft Sentinel
+
+Continuing from the same incident, this view captures my analysis using the Timeline tab — which revealed how the attacker’s activities unfolded across services and time.
+
+I traced suspicious actions from initial access to privilege escalation across Entra ID, Defender for Cloud, and Azure Activity. By combining timeline mapping with graph-based entity analysis, I accelerated investigation and reinforced incident response accuracy.
+
+This demonstrates my ability to interpret correlated data across Microsoft’s XDR stack and convert it into actionable response steps using Microsoft Sentinel.  | ![Incident](./assets/Correlated_story_telling.png) |
+| 🎯 Conditional Access Policy enforcement(**80%** Score)        | ![CA Policy](./assets/Conditional_access_policies.png)   |
+| 🖥️ Device monitoring in Endpoint Central: Shows real-world vulnerability visibility and patch posture for hybrid endpoints using Endpoint Central, integrated with Microsoft Entra ID device identity.   | ![Endpoint](./assets/Device_monitoring.png)|
 |Microsoft Purview showing a compliance score of **80.21%**, reflecting strong enforcement of data governance, regulatory controls, and risk-based access monitoring.  Microsoft Purview centralizes compliance insights and monitors alignment with standards like SOX, NYDFS, GLBA, PCI-DSS, NIST, ISO 27001, and Microsoft Security Benchmarks.|![Purview Compliance](./assets/Compliance_score.png) |
 
 > All screenshots are real, redacted, and timestamped. No identifying or sensitive data is shown.
