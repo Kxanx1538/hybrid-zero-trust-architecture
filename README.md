@@ -25,7 +25,91 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 ![Hybrid Architecture](./assets/Hybrid+Multi-cloud-sanitized.drawio.png)
 
 ---
+### 🧭 Architecture Breakdown & Data Flow
 
+🧩 Architecture Components Explained
+
+This architecture enforces Zero Trust principles across a hybrid, multi-cloud ecosystem, integrating identity, access, monitoring, and secure access controls. Here's how the components interact:
+
+Zone / Layer
+
+Component
+
+Description
+
+Federated Identity
+
+Federated Identity Management (FIM)
+
+Centralized access and identity federation using Microsoft Entra ID (SSO, MFA, SCIM, GPO, GWA) to manage user access across SaaS, Azure, AWS, and on-prem resources.
+
+User Layer
+
+👤 User Identity
+
+Identities are verified and routed through Conditional Access policies and MFA enforced via Entra ID.
+
+On-Premises
+
+AD, Legacy Travel Apps
+
+Legacy applications and infrastructure reside in a high-trust zone, integrated into Azure via AD Connect.
+
+Azure Cloud
+
+Azure Resources, Defender XDR
+
+Azure hosts core apps, UEM, and SIEM; integrated with Microsoft Sentinel, Defender for Cloud, and Conditional Access enforcement.
+
+
+
+Microsoft 365, Compliance Manager
+
+Compliance policies and threat monitoring configured in Microsoft Purview.
+
+AWS Cloud
+
+IAM Identity Center, VPC, SecurityHub
+
+AWS apps and services reside in a medium trust zone, connected via ZTNA and monitored through AWS CloudTrail and SecurityHub.
+
+SaaS Layer
+
+Travel apps, Email, ITSM tools
+
+SaaS integrations (e.g., Zendesk, Gmail, Zoho) are federated via Entra ID and secured using Secure Web Gateway and VPN access.
+
+Security Tools
+
+Netbird VPN, Microsoft Global Secure Access (GSA)
+
+Tunnels secure access between clouds and SaaS services, applying Zero Trust Network Access (ZTNA).
+
+Monitoring
+
+Sentinel, Site24x7, Azure Monitor
+
+Central SIEM correlation, real-time alerts, endpoint, and network telemetry across environments.
+
+🔄 Data & Trust Flow Summary
+
+Identity Flow: Authenticated users flow through Entra ID → Conditional Access → SCIM/MFA → Workload Access.
+
+Traffic Routing: Traffic is routed over Netbird VPN and Microsoft GSA for secure connectivity.
+
+Zone Enforcement:
+
+🔐 High Trust: On-Prem
+
+🔐 Medium Trust: Azure & AWS
+
+🔐 Low Trust: SaaS (external)
+
+Policy Controls: Conditional Access & RBAC differentiate user access across zones and services.
+
+Monitoring Layer: Logs from Azure, AWS, SaaS, and VPN are ingested into Microsoft Sentinel for correlation, alerting, and SOAR workflows.
+
+---
 ## 🛡️ Security Highlights
 
 - ✅ Hybrid identity and access control with **Microsoft Entra ID**, AWS IdentityCenter, AD
