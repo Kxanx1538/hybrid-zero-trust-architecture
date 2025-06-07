@@ -45,19 +45,19 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 ## 🔄 Data & Trust Flow Summary
 
--Identity Flow: Authenticated users flow through Entra ID → Conditional Access → SCIM/MFA → Workload Access.
+- Identity Flow: Authenticated users flow through Entra ID → Conditional Access → SCIM/MFA → Workload Access.
 
--Traffic Routing: Traffic is routed over Netbird VPN and Microsoft GSA for secure connectivity.
+- Traffic Routing: Traffic is routed over Netbird VPN and Microsoft GSA for secure connectivity.
 
--Zone Enforcement:
+- Zone Enforcement:
 
-  -🔐 High Trust: On-Prem
+  - 🔐 High Trust: On-Prem
 
-  -🔐 Medium Trust: Azure & AWS
+  - 🔐 Medium Trust: Azure & AWS
 
-  -🔐 Low Trust: SaaS (external)
+  - 🔐 Low Trust: SaaS (external)
 
--Policy Controls: Conditional Access & RBAC differentiate user access across zones and services.
+- Policy Controls: Conditional Access & RBAC differentiate user access across zones and services.
 
 -Monitoring Layer: Logs from Azure, AWS, SaaS, and VPN are ingested into Microsoft Sentinel for correlation, alerting, and SOAR workflows.
 
