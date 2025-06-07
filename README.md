@@ -41,8 +41,8 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 
 | Description                                | Screenshot                                               |
 |--------------------------------------------|------------------------------------------------          |
-| 🔎 Privilege escalation alert investigation| ![Incident](./assets/Privilege_escalation.png)           |
-| 📦 Suspicious resource deployment          | ![Incident](./assets/Suspicious_resource_deployment.png) |
+| 🔎 Correlated attacks: Privilege escalation alert investigation| ![Incident](./assets/Privilege_escalation.png)           |
+| 📦 Correlated attacks: Suspicious resource deployment          | ![Incident](./assets/Suspicious_resource_deployment.png) |
 | 🎯 Conditional Access Policy enforcement(80% Score)| ![CA Policy](./assets/Conditional_Access_Policies.png)   |
 | 🖥️ Device monitoring in Endpoint Central   | ![Endpoint](./assets/Device_monitoring.png)              |
 | 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)               |
