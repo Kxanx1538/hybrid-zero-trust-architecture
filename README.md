@@ -143,7 +143,7 @@ This enables a smaller security team to perform efficient detection, investigati
 
 ---
 ## 🚧 Future Projects: ObsidianWall Platform Initiative (In progress)
-Security Infrastructure-as-Code (SIaC) — Designing a secure-by-default IaC framework focused on compliant, multi-cloud deployments.
+**Security Infrastructure-as-Code (SIaC)** — Designing a secure-by-default IaC framework focused on compliant, multi-cloud deployments.
 
 ---
 
