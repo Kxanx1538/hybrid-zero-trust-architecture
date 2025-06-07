@@ -1,8 +1,9 @@
 
-# 🔐 Hybrid Multi-Cloud Zero Trust Architecture
+# 🔐 Hybrid Multi-Cloud Zero Trust Architecture with Lean SOC
 
 
-Welcome to my cybersecurity engineering showcase—a real-world hybrid multi-cloud architecture I designed and implemented using Zero Trust principles across On-Prem, Azure, AWS, and SaaS ecosystem.  The design integrates identity, access control, monitoring, and secure remote access across cloud, on-premises, and SaaS environments.
+
+Welcome to my cybersecurity engineering showcase—a real-world hybrid multi-cloud architecture I designed and implemented using Zero Trust principles integrated with a Lean SOC model across On-Prem, Azure, AWS, and SaaS ecosystem.  The design integrates identity, access control, security monitoring, automation, governance, and secure remote access across cloud, on-premises, and SaaS environments.
 
 ---
 
@@ -121,6 +122,23 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 | **Infrastructure**       | Azure & AWS infrastructure secured via Terraform IaC, Defender for Cloud, AWS Security Hub       |
 | **Visibility & Analytics** |Mcrosoft Defender XDR,  Microsoft Sentinel (SIEM), Azure Monitor, Site24x7, AWS CloudWatch, Log360|
 | **Automation & Response**| Sentinel SOAR playbooks, Azure Logic Apps, Auto-remediation policies, Compliance Manager insights|
+
+
+---
+
+## 🧠 Lean SOC in Action: Smart Security Maximizing Security with Minimal Resources
+
+This architecture was designed with a Lean SOC model in mind, optimizing limited resources for maximum security impact. Key strategies:
+
+- ✳️ SIEM/SOAR consolidation using Microsoft Sentinel and Log360
+- 🔁 Automation of triage and response workflows using Sentinel playbooks
+- 🔍 Unified alert visibility across Azure, AWS, endpoints, and SaaS
+- 🎯 Identity-centric telemetry via Entra ID and Conditional Access
+- 📊 Use of compliance scoring (Purview) and device hygiene (Endpoint Central) for posture-based alerting
+- 🚨 Shadow IT discovery and app control via Defender XDR Cloud Discovery
+
+This enables a smaller security team to perform efficient detection, investigation, and response across a complex hybrid multi-cloud setup.
+
 
 
 ---
