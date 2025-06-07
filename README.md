@@ -59,7 +59,7 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 - Policy Controls: Conditional Access & RBAC differentiate user access across zones and services.
 
--Monitoring Layer: Logs from Azure, AWS, SaaS, and VPN are ingested into Microsoft Sentinel for correlation, alerting, and SOAR workflows.
+- Monitoring Layer: Logs from Azure, AWS, SaaS, and VPN are ingested into Microsoft Sentinel for correlation, alerting, and SOAR workflows.
 
 ---
 ## 🛡️ Security Highlights
