@@ -106,7 +106,7 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 | Endpoint & UEM       | Zoho Endpoint Central (UEM), Microsoft Defender for Endpoint (ATP), integrated with Entra ID           |
 | SIEM & Monitoring    | Microsoft Defender XDR, Microsoft Sentinel, Azure Monitor, Site24x7, AWS CloudWatch, Log360            |
 | Compliance & Governance   | Microsoft Purview, Microsoft Defender for Cloud, AWS Security Hub, Log360                         |
-| DevSecOps & Code Security | GitHub Actions, CodeQL, Dependabot, Burp suite 
+| DevSecOps & Code Security | GitHub Actions, CodeQL, Dependabot, OWASP ZAP, Burp suite 
 
 ---
 
