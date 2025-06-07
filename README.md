@@ -110,7 +110,6 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 ---
 
 ## 📁 Repository Contents
-## 📁 Repository Contents
 
 ```
 ├── assets/           # Diagrams and redacted screenshots
