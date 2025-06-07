@@ -119,7 +119,7 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 | **Applications**         | Conditional Access App Controls, SSO integrations, OAuth Scopes, Application Registrations       |
 | **Data**                 | Microsoft Purview (DLP, Insider Risk Mgmt, Compliance Manager), Sensitivity Labels, eDiscovery   |
 | **Infrastructure**       | Azure & AWS infrastructure secured via Terraform IaC, Defender for Cloud, AWS Security Hub       |
-| **Visibility & Analytics** | Microsoft Sentinel (SIEM), Azure Monitor, Site24x7, AWS CloudWatch, Log360                     |
+| **Visibility & Analytics** |Mcrosoft Defender XDR,  Microsoft Sentinel (SIEM), Azure Monitor, Site24x7, AWS CloudWatch, Log360|
 | **Automation & Response**| Sentinel SOAR playbooks, Azure Logic Apps, Auto-remediation policies, Compliance Manager insights|
 
 
