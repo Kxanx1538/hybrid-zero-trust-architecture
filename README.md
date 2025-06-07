@@ -79,11 +79,14 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 |--------------------------------------------|------------------------------------------------          |
 | 🔎 Correlated attacks: Privilege escalation alert investigation| ![Incident](./assets/Privilege_escalation.png)           |
 | 📦 Correlated attacks: Suspicious resource deployment          | ![Incident](./assets/Suspicious_resource_deployment.png) |
-| 🎯 Conditional Access Policy enforcement(80% Score)| ![CA Policy](./assets/Conditional_Access_Policies.png)   |
+| 🎯 Conditional Access Policy enforcement(**80%** Score)| ![CA Policy](./assets/Conditional_access_policies.png)   |
 | 🖥️ Device monitoring in Endpoint Central: Shows real-world vulnerability visibility and patch posture for hybrid endpoints using Endpoint Central, integrated with Microsoft Entra ID device identity.   | ![Endpoint](./assets/Device_monitoring.png)              |
-| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)               |
+| 📊 SIEM log correlation in Microsoft Sentinel | ![Sentinel](./assets/sentinel-logs.png)|
+|Microsoft Purview showing a compliance score of **80.21%**, reflecting strong enforcement of data governance, regulatory controls, and risk-based access monitoring.  Microsoft Purview centralizes compliance insights and monitors alignment with standards like NIST, ISO 27001, and Microsoft Security Benchmarks.      | ![Purview Compliance](./assets/compliance_score.png) |
 
 > All screenshots are real, redacted, and timestamped. No identifying or sensitive data is shown.
+
+
 
 ---
 
