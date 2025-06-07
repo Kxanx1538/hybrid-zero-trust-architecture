@@ -107,7 +107,7 @@ This screenshot shows a Microsoft Purview compliance score of 87%, reflecting my
 
 ---
 
-## 🚧 Future Projects: ObsidianWall Platform Initiative
+## 🚧 Future Projects: ObsidianWall Platform Initiative (In progress)
 Security Infrastructure-as-Code (SIaC) — Designing a secure-by-default IaC framework focused on compliant, multi-cloud deployments.
 
 ---
