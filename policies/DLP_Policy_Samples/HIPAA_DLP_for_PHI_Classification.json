@@ -1,0 +1,33 @@
+
+{
+  "name": "HIPAA-PHI-Protection",
+  "policyType": "DLP",
+  "settings": {
+    "ruleGroups": [
+      {
+        "name": "PHI Detection Group",
+        "rules": [
+          {
+            "name": "Detect PHI Types",
+            "conditions": {
+              "sensitiveInfoTypes": [
+                "U.S. Health Insurance Claim Number (HICN)",
+                "Medical Term (PHI)"
+              ],
+              "minConfidence": "High"
+            },
+            "actions": {
+              "blockAccess": false,
+              "notifyUser": true,
+              "notifyAdmin": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scope": {
+    "locations": ["OneDrive", "Teams", "Devices", "Microsoft Defender XDR"]
+  },
+  "isEnabled": true
+}

@@ -1,0 +1,30 @@
+
+{
+  "name": "PCI-CreditCard-DLP",
+  "policyType": "DLP",
+  "settings": {
+    "ruleGroups": [
+      {
+        "name": "Credit Card Rule Group",
+        "rules": [
+          {
+            "name": "Detect Credit Card Numbers",
+            "conditions": {
+              "sensitiveInfoTypes": ["Credit Card Number"],
+              "minConfidence": "High"
+            },
+            "actions": {
+              "blockAccess": false,
+              "notifyUser": true,
+              "notifyAdmin": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scope": {
+    "locations": ["Exchange", "SharePoint"]
+  },
+  "isEnabled": true
+}

@@ -1,0 +1,30 @@
+
+{
+  "name": "GLBA-SSN-Protection",
+  "policyType": "DLP",
+  "settings": {
+    "ruleGroups": [
+      {
+        "name": "SSN Detection Group",
+        "rules": [
+          {
+            "name": "Detect SSN",
+            "conditions": {
+              "sensitiveInfoTypes": ["U.S. Social Security Number"],
+              "minConfidence": "High"
+            },
+            "actions": {
+              "blockAccess": true,
+              "notifyUser": false,
+              "notifyAdmin": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scope": {
+    "locations": ["Exchange", "SharePoint", "OneDrive"]
+  },
+  "isEnabled": true
+}
