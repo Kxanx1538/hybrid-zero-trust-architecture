@@ -48,7 +48,7 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 - Identity Flow: Authenticated users flow through Entra ID → Conditional Access → SCIM/MFA → Workload Access.
 
-- Traffic Routing: Traffic is routed over Netbird VPN and Microsoft GSA for secure connectivity.
+- Traffic Routing: Traffic is routed over VPN and Microsoft GSA for secure connectivity.
 
 - Zone Enforcement:
 
@@ -63,7 +63,7 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 - Monitoring Layer: Logs from Azure, AWS, SaaS, and VPN are ingested into Microsoft Sentinel for correlation, alerting, and SOAR workflows.
 
 ---
-## 🛡️ Security Highlights
+## 🛡️ Security Highlights 
 
 - ✅ Hybrid identity and access control with **Microsoft Entra ID**, AWS IdentityCenter, AD
 - ✅ Zero Trust Network Access using **Netbird VPN** + **Microsoft Global Secure Access**
@@ -96,7 +96,7 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 
 ---
 
-## 🧰 Tooling Stack
+## 🧰 Tooling Stack examples
 
 | Category             | Tools / Platforms                                                                                      |
 |----------------------|--------------------------------------------------------------------------------------------------------|
@@ -112,7 +112,7 @@ This updated screenshot reflects a 97% compliance score in Microsoft Purview Com
 
 ## 🧱 Zero Trust Pillars & Capabilities
 
-| Zero Trust Pillar        | Implementation & Tools                                                                          |
+| Zero Trust Pillar        | Implementation & Tools examples                                                                          |
 |--------------------------|--------------------------------------------------------------------------------------------------|
 | **Identity**             | Microsoft Entra ID, MFA, Conditional Access, Identity360, SCIM, SSO, AWS Identity Center         |
 | **Devices**              | Zoho Endpoint Central (UEM), Microsoft Intune (if applicable), Compliance policies via Entra ID  |
