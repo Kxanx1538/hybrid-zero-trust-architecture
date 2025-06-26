@@ -29,7 +29,7 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 | Label / Acronym      | Meaning                                                                |
 | -------------------- | ---------------------------------------------------------------------- |
 | **IAM**              | Identity & Access Management – SSO, MFA, SCIM, Conditional Access      |
-| **ZTN**              | Zero Trust Network – enforced via VPN and Secure Access Gateway layers |
+| **ZTN**              | Zero Trust Network – enforced via VPN and Security Service Edge (SSE) |
 | **ZTM**              | Zero Trust Mesh – peer-to-peer identity-aware overlay                  |
 | **SIEM**             | Security Information & Event Management (Microsoft Sentinel)           |
 | **AMA**              | Azure Monitor Agent – telemetry collection agent for Monitor pipeline  |
@@ -52,7 +52,7 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 |                               |Microsoft 365, Compliance Manager      |Compliance policies and threat monitoring configured in Microsoft Purview.
 |AWS Cloud                      |IAM Identity Center, VPC, SecurityHub, CloudWatch, S3  |AWS apps and services reside in a medium trust zone, connected via ZTNA and monitored through AWS CloudTrail and SecurityHub.
 |SaaS Layer                     |Travel apps, Email, ITSM, ITAM tools   |SaaS integrations (e.g., Zendesk, Gmail, Zoho) are federated via Entra ID and secured using Secure Web Gateway and VPN access.
-|Network Security Tools         |VPN (ZTM), Microsoft Global Secure Access (GSA), Suricata|Secure tunnels (VPN, ZTM) and edge access enforcement (GSA) connect environments across trust zones under a Zero Trust Network (ZTN) model.
+|Network Security Tools         |VPN (ZTM), Microsoft Global Secure Access (GSA)-Sesure Service Edge, Suricata|Secure tunnels (VPN, ZTM) and edge access enforcement (GSA) connect environments across trust zones under a Zero Trust Network (ZTN) model.
 |Monitoring                     |Sentinel, Site24x7, Azure Monitor      |Logs and telemetry are collected via AMA, aggregated into Microsoft Sentinel for SIEM, and used to trigger automated alerts and responses.
 
 ## 🔄 Data & Trust Flow Summary
