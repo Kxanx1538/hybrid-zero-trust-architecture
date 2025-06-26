@@ -25,6 +25,17 @@ The architecture follows Zero Trust principles — ensuring **continuous identit
 
 ![Hybrid Architecture](./assets/Hybrid+Multi-cloud-sanitized.drawio.png)
 
+---
+| Label / Acronym      | Meaning                                                                |
+| -------------------- | ---------------------------------------------------------------------- |
+| **IAM**              | Identity & Access Management – SSO, MFA, SCIM, Conditional Access      |
+| **ZTN**              | Zero Trust Network – enforced via VPN and Secure Access Gateway layers |
+| **ZTM**              | Zero Trust Mesh – peer-to-peer identity-aware overlay                  |
+| **SIEM**             | Security Information & Event Management (Microsoft Sentinel)           |
+| **AMA**              | Azure Monitor Agent – telemetry collection agent for Monitor pipeline  |
+| **Azure Arc**        | Resource bridge to onboard and manage hybrid machines in Azure         |
+
+---
 
 ## 🧭 Architecture Breakdown & Data Flow
 
@@ -34,15 +45,15 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 |Zone / Layer                   |Component                            | Description
 |-------------------------------|-------------------------------------|-----------------
-|Federated Identity             |Federated Identity Management (FIM)  |Centralized access and identity federation using Microsoft Entra ID (SSO, MFA,PIM, SCIM, GPO, CA) to manage user access across SaaS, Azure, AWS, and on-prem resources.
-|User Layer                     |👤 User Identity                     |Identities are verified and routed through Conditional Access policies and MFA enforced via Entra ID.
-|On-Premises                    |AD, Legacy Travel Apps                |Legacy applications and infrastructure reside in a high-trust zone, integrated into Azure via AD Connect.
-|Azure Cloud                    |VNet,VMs, Azure blob, Defender XDR, Defender for Cloud  |Azure hosts core apps, UEM, and SIEM; integrated with Microsoft Sentinel, Defender for Cloud, and Conditional Access enforcement.
+|Hybrid Identity                |Hybrid Identity Management (IAM)     |Centralized access and identity federation using Microsoft Entra ID (SSO, MFA, SCIM, PIM, Conditional Access), with integrations across SaaS, Azure, AWS, and on-prem environments.
+|User Layer                     |👤 User Identity                     |Identities are authenticated and routed through Entra ID using MFA and Conditional Access policies.
+|On-Premises                    |AD, Legacy Travel Apps                |Legacy applications and infrastructure reside in a high-trust zone, synchronized with Entra ID using AD Connect and managed under hybrid identity governance.
+|Azure Cloud                    |VNet,VMs, Azure blob, Defender XDR, Defender for Cloud  |Azure hosts core infrastructure, UEM, and SIEM; protected via Microsoft Defender, Azure Monitor, and Conditional Access enforcement.enforcement.
 |                               |Microsoft 365, Compliance Manager      |Compliance policies and threat monitoring configured in Microsoft Purview.
 |AWS Cloud                      |IAM Identity Center, VPC, SecurityHub, CloudWatch, S3  |AWS apps and services reside in a medium trust zone, connected via ZTNA and monitored through AWS CloudTrail and SecurityHub.
 |SaaS Layer                     |Travel apps, Email, ITSM, ITAM tools   |SaaS integrations (e.g., Zendesk, Gmail, Zoho) are federated via Entra ID and secured using Secure Web Gateway and VPN access.
-|Network Security Tools         |Netbird VPN, Microsoft Global Secure Access (GSA), Suricata |Tunnels secure access between clouds and SaaS services, applying Zero Trust Network Access (ZTNA).
-|Monitoring                     |Sentinel, Site24x7, Azure Monitor      |Central SIEM correlation, real-time alerts, endpoint, and network telemetry across environments.
+|Network Security Tools         |VPN (ZTM), Microsoft Global Secure Access (GSA), Suricata|Secure tunnels (VPN, ZTM) and edge access enforcement (GSA) connect environments across trust zones under a Zero Trust Network (ZTN) model.
+|Monitoring                     |Sentinel, Site24x7, Azure Monitor      |Logs and telemetry are collected via AMA, aggregated into Microsoft Sentinel for SIEM, and used to trigger automated alerts and responses.
 
 ## 🔄 Data & Trust Flow Summary
 
@@ -78,10 +89,10 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 
 | Description                                                    | Screenshot                                               |
 |----------------------------------------------------------------|------------------------------------------------          |
-|**🔎 Correlated attacks: Privilege escalation alert investigation**
-This Sentinel investigation reflects my analysis of a high-severity incident involving unauthorized role elevation. Sentinel’s Fusion analytics automatically grouped related alerts — such as privileged role assignments and PowerShell activity — into a unified attack storyline.I examined the Investigation Graph to correlate IP addresses, user accounts, and affected resources. This accelerated my understanding of the attack path, validated the threat, and informed response decisions. The view demonstrates how I conducted cross-domain correlation analysis to drive evidence-based incident response in a hybrid environment.                                                     | ![Screenshot of Microsoft Sentinel Investigation Graph showing cross-domain correlated entities including IPs, users, and resources](./assets/Persistant_attack.png)           |
-| **📊  SIEM Log Correlation in Microsoft Sentinel**
-Continuing from the same incident, this view captures my analysis using the Timeline tab — which revealed how the attacker’s activities unfolded across services and time. I traced suspicious actions from initial access to privilege escalation across Entra ID, Defender for Cloud, and Azure Activity. By combining timeline mapping with graph-based entity analysis, I accelerated investigation and reinforced incident response accuracy. This demonstrates my ability to interpret correlated data across Microsoft’s XDR stack and convert it into actionable response steps using Microsoft Sentinel.                                                       | ![Screenshot of Microsoft Sentinel Timeline view showing sequence of attacker actions across cloud services](./assets/Correlated_story_telling.png) |
+|**⏱️ Attack Timeline: Tracing a Multi-Stage, Multi-User Incident Across Cloud Platforms**
+This timeline view captures the beginning of my investigation into a “Multi-stage incident involving multiple users”, as automatically surfaced by Microsoft Sentinel’s Fusion engine. The timeline shows how the attack unfolded in distinct phases — starting with suspicious resource deployments and progressing to privileged role assignments across user accounts. This high-level chronology helped me quickly identify lateral movement and escalation patterns. By tracing the flow of alerts over time across Entra ID, Defender for Cloud, and Azure Activity, I was able to prioritize critical events for deeper inspection. This temporal correlation is foundational to Zero Trust enforcement and operational agility in a Lean SOC.  |![Screenshot of Microsoft Sentinel Investigation Graph showing cross-domain correlated entities including IPs, users, and resources](./assets/Correlated_story_telling.png)           |
+| **🔍 Alert Deep Dive: Investigating Privileged Role Assignment in a Multi-Stage Threat**
+Building on the timeline, I pivoted into focused analysis of a specific alert within the “Multi-stage incident involving multiple users.” This screenshot shows the Microsoft Sentinel Investigation Graph with the Info pane open, centered on a “New User Assigned to Privileged Role” alert. The alert was flagged with the Persistence tactic, and the context revealed unauthorized privilege escalation to a previously unprivileged user — a potential foothold for lateral movement. By correlating entity relationships like IPs, users, and role changes, I validated the severity of the threat and confirmed Zero Trust controls were functioning as intended. This deeper analysis accelerated response prioritization — a critical advantage in Lean SOC operations.   | ![Screenshot of Microsoft Sentinel Timeline view showing sequence of attacker actions across cloud services](./assets/Persistant_attack.png) |
 | **🎯 Conditional Access Policy enforcement(**80.21%** Identity Score)**
 This screenshot reflects my implementation and continuous enforcement of Conditional Access policies in Microsoft Entra ID, achieving an 80.21% identity security score. Policies enforced include MFA for privileged roles, blocking legacy authentication, and device-based access restrictions. I aligned most configurations with Microsoft’s Zero Trust recommendations while testing custom policies in Report-Only mode for iterative evaluation. This demonstrates my capability to operationalize adaptive access control using identity posture metrics to assess effectiveness and gaps.| ![Screenshot of Microsoft Entra ID Conditional Access Policies configuration](./assets/Conditional_access_policies.png)<br>![Screenshot showing Microsoft Entra ID Identity Security Score of 80.21%](./assets/Identity_score.png)  |
 |**🖥️ Device monitoring in Endpoint Central**
