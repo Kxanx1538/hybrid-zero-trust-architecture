@@ -10,7 +10,7 @@ Welcome to my cybersecurity engineering showcase—a real-world hybrid multi-clo
 - Identity and Access Management (IAM) across Azure, AWS, and SaaS
 - Zero Trust implementation via Conditional Access, DLP, and device compliance
 - Threat Detection and Automated Response via Microsoft Sentinel and custom Python scripts
-- Multi-cloud security architecture and policy-as-code governance
+- hybrid Multi-cloud security architecture and policy-as-code governance
 
 ---
 
