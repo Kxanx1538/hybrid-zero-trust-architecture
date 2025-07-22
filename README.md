@@ -6,6 +6,13 @@
 Welcome to my cybersecurity engineering showcase—a real-world hybrid multi-cloud architecture I designed and implemented using Zero Trust principles integrated with a Lean SOC model across On-Prem, Azure, AWS, and SaaS ecosystem.  The design integrates identity, access control, security monitoring, automation, governance, and secure remote access across cloud, on-premises, and SaaS environments.
 
 ---
+### 💼 Skills Demonstrated
+- Identity and Access Management (IAM) across Azure, AWS, and SaaS
+- Zero Trust implementation via Conditional Access, DLP, and device compliance
+- Threat Detection and Automated Response via Microsoft Sentinel and custom Python scripts
+- Multi-cloud security architecture and policy-as-code governance
+
+---
 
 ## 🌐 Overview
 
