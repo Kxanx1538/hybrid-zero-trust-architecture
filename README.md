@@ -57,10 +57,10 @@ This architecture enforces Zero Trust principles across a hybrid, multi-cloud ec
 |On-Premises                    |AD, Legacy Travel Apps                |Legacy applications and infrastructure reside in a high-trust zone, synchronized with Entra ID using AD Connect and managed under hybrid identity governance.
 |Azure Cloud                    |VNet,VMs, Azure blob, Defender XDR, Defender for Cloud  |Azure hosts core infrastructure, UEM, and SIEM; protected via Microsoft Defender, Azure Monitor, and Conditional Access enforcement.enforcement.
 |                               |Microsoft 365, Compliance Manager      |Compliance policies and threat monitoring configured in Microsoft Purview.
-|AWS Cloud                      |IAM Identity Center, VPC, SecurityHub, CloudWatch, S3  |AWS apps and services reside in a medium trust zone, connected via ZTNA and monitored through AWS CloudTrail and SecurityHub.
+|AWS Cloud                      |IAM Identity Center, VPC, Security Hub, Security Hub CSPM, CloudWatch, S3  |AWS apps and services reside in a medium trust zone, connected via ZTNA and monitored through AWS CloudTrail and SecurityHub.
 |SaaS Layer                     |Travel apps, Email, ITSM, ITAM tools   |SaaS integrations (e.g., Zendesk, Gmail, Zoho) are federated via Entra ID and secured using Secure Web Gateway and VPN access.
 |Network Security Tools         |VPN (ZTM), Microsoft Global Secure Access (GSA)-Sesure Service Edge, Suricata|Secure tunnels (VPN, ZTM) and edge access enforcement (GSA) connect environments across trust zones under a Zero Trust Network (ZTN) model.
-|Monitoring                     |Sentinel, Site24x7, Azure Monitor      |Logs and telemetry are collected via AMA, aggregated into Microsoft Sentinel for SIEM, and used to trigger automated alerts and responses.
+|Monitoring                     |Sentinel, Site24x7, Azure Monitor, AWS Security Hub, CloudWatch, CloudTrail |Logs and telemetry are collected via AMA, aggregated into Microsoft Sentinel for SIEM, and used to trigger automated alerts and responses.
 
 ## 🔄 Data & Trust Flow Summary
 
